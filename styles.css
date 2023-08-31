@@ -1,0 +1,739 @@
+body{
+    margin: 0%;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato-Regular.ttf);
+  }
+
+/* Add a thin horizontal scrollbar with a blue thumb and white track */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 0px; /* Set height to 0 to hide the horizontal scrollbar */
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* For Webkit-based browsers */
+*::-webkit-scrollbar-thumb {
+  background-color:#48b8e2;
+  border: 3px solid white;
+}
+
+
+*::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}
+
+button{
+  border: none;
+}
+
+/*=====================================Welcome================================*/
+.welcomeContainer{
+    background-color: #078bda;
+    background-image: linear-gradient(160deg, #078bda 0%, #48b8e2 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-135deg, royalblue 40px, transparent 0) 0 40px, linear-gradient(135deg, royalblue 40px, #fff 0) 0 40px;
+  background-size: 80px 80px;
+    background-color: royalblue;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+.greeting,
+.name{
+    font-family: Lato;
+}
+
+.greeting{
+    font-size: 2vw;
+    color: white;
+}
+
+.name{
+    font-size: 3vw;
+    color: aqua;
+}
+
+.portrait{
+    width: 18vw;
+    height: auto;
+    border-radius: 10%;
+    --s: 15px; /* control the size */
+    padding: var(--s);
+    border: var(--s) solid #0000;
+    background: conic-gradient(from 90deg at 1px 1px,#0000 25%, white 0);
+    clip-path: 
+      polygon(
+        0    0   ,33%  0   ,50% calc(2*var(--s))       ,66%  0,
+        100% 0   ,100% 33% ,calc(100% - 2*var(--s)) 50%,100% 66%,
+        100% 100%,66%  100%,50% calc(100% - 2*var(--s)),33%  100%,
+        0    100%,0    66% ,calc(2*var(--s)) 50%       ,0    33%
+      )
+}
+
+/*=========================================CV===========================================*/
+.cvTitle{
+    font-family: Lato;
+    font-size: 5vw;
+    margin-left: 2vw;
+    padding-left: 0.5vw;
+    margin-right: auto;
+    background: linear-gradient(to right, royalblue, cyan);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;    
+    width: 95vw;
+}
+
+.CV{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.cvSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Lato;
+    font-size: 1vw;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    border-radius: 20px;
+    width: 15vw;
+    height: 10vh;
+    text-align: center;
+    position: relative;
+    padding: 3%;
+}
+
+.withLine::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -26%;
+    width: 20px;
+    height: 2px;
+    background-color: royalblue; 
+    width: calc(26%);
+  }
+
+.sectionTitle{
+    font-weight: 1000;
+}
+
+.cvContainer{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 1%;
+    background-color: #a5c4e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 50px;
+}
+
+/*===============================Projects==========================*/
+.projects{
+    padding-top: 2%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    background: linear-gradient(-315deg, #926AA6 40px, transparent 0) 0 40px, linear-gradient(315deg, #926AA6 40px, #fff 0) 0 40px;
+    background-size: 80px 80px;
+    background-color:#926AA6;
+    background-position: left top;
+    background-repeat: repeat-x;
+}
+
+.projectsTitle{
+    font-family: Lato;
+    font-size:5vw;
+    margin-right: auto;
+    width: 95vw;
+    margin-top: 6vh;
+    margin-left: 2%;
+    color: white;
+}
+
+.projectContainer{
+    width: 90vw;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.swipe-left{
+  animation-name: swipe-left;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+.swipe-right{
+  animation-name: swipe-right;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+.appear-left{
+  animation-name: appear-left;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+.appear-right{
+  animation-name: appear-right;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+@keyframes swipe-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes swipe-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes appear-left {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes appear-right {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+  
+  .item {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 75vw;
+    padding: 20px;
+    background-color: white;
+    height: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.item.active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transform: translateX(0); /* Bring the active item back into view */
+  }
+  
+  .projectSwipe {
+    z-index: 6;
+    background-color: white;
+    font-size: 2vw;
+    padding: 1%;
+    width: 4vw;
+    height: 4vw;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */
+  }
+
+  .projectSwipe:hover{
+    background-color: rgb(212, 211, 211);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .transition{
+    display: block;
+    height: 15vh;
+    width: 100vw;
+  }
+
+  .transition#first{
+    /*background-image: linear-gradient(to bottom, #926AA6, #746180);*/
+    background-color: #806194;
+  }
+  .transition#second{
+    /*background-image: linear-gradient(to bottom, #746180, #6B5876);*/
+    background-color: #746180;
+  }
+
+  .imgContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 40vw;
+    height: 80%;
+    display: block;
+    top: 50%;
+    right: 2%; /* Position to the far right */
+    transform: translateY(-50%); /* Center vertically */
+    background-image: linear-gradient(to right, #926AA6, #bd76e0);
+    background-color: #926AA6;
+  }
+
+  .projectImg {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 61%;
+    transform: translate(-50%, -50%) perspective(1000px) rotate3d(3, -5, 2, 20deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */
+  }
+  
+
+  .summaryContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    top: 59%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  }
+
+  .projectName{
+    font-family: Lato;
+    font-size: 2.5vw;
+    width: 60%;
+    border-bottom: 0.1rem solid black;
+  }
+
+  .summary{
+    margin-top: 5%;
+    font-family: Lato;
+    font-size: 1vw;
+    width: 60%;
+  }
+
+  .linkContainer{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-left: 2%;
+    margin-bottom: 15vh;
+  }
+
+  .link{
+    width: 8vw;
+    height: 8vw;
+    box-shadow: 0 0 10px rgba(176, 51, 248, 0.7); /* Apply a box shadow all around */
+    border-radius: 20%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .link:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #e2e2e2;
+  }
+
+  .linkImg{
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /*===================================Skills====================================*/
+  .skills{
+    background-color: #6B5876;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .skillTitle{
+    font-family: Lato;
+    font-size: 7vw;
+    color: white;
+    margin-left: 2%;
+  }
+
+  .skillContainer{
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .skill{
+    display: flex;
+    width: 11vw;
+    height: 11vw;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+    background-color:#926AA6;
+    align-items: center;
+    animation: float 3s infinite;
+    border-radius: 50px;
+  }
+
+  @keyframes wobble {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    15% {
+      transform: translateX(-1px) rotate(-4deg);
+    }
+    30% {
+      transform: translateX(5px) rotate(4deg);
+    }
+    45% {
+      transform: translateX(-2.5px) rotate(-3deg);
+    }
+    60% {
+      transform: translateX(1.5px) rotate(2deg);
+    }
+    75% {
+      transform: translateX(-1px) rotate(-1deg);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px) translateX(5px); /* Adjust the distance of floating */
+    }
+  }
+
+  .skillImg{
+    max-height: 90%;
+    max-width: 80%;
+    min-width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/*====================================Socials==================================*/
+.socials{
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wave1{
+  position: absolute;
+  z-index: 3;
+  top: -10%;
+}
+.wave2{
+  position: absolute;
+  z-index: 2;
+  top: -6%;
+}
+.wave3{
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+}
+
+.socialsTitle{
+  margin-top: auto;
+  color: white;
+  font-size: 5vw;
+  font-family: Lato;
+  margin-left: 2%;
+  margin-right: auto;
+  margin-top: 18%;
+}
+
+.socialsContainer{
+  width: 80vw;
+  height: 20vh;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social{
+  width: 10%;
+}
+
+.socialLogo{
+  width: 100%;
+}
+
+.socialLogo:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*=====================================================Sources========================================*/
+
+.sources{
+  border-top: white solid 0.1rem;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.sourcesTitle{
+  margin-top: auto;
+  color: white;
+  font-size: 5vw;
+  font-family: Lato;
+  margin-left: 2%;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.srcText{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+}
+
+.sourceContainer{
+  background-color: white;
+  width: 40vw;
+  height: 12vh;
+  display: flex;
+  text-decoration: none;
+  font-family: Lato;
+  justify-content: space-between;
+  color: black;
+  border-radius: 50px;
+}
+
+.srcDescription{
+  font-size: 1.5vw;
+}
+
+.srcLink{
+  font-size: 1vw;
+  color: rgb(156, 156, 156);
+}
+
+.arrow{
+  font-size: 3vw;
+  color: black;
+  width: 100%;
+}
+
+.srcArrow{
+  border-left:rgb(83, 83, 83) solid 0.1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 15%;
+  text-align: center;
+}
+
+.sourceContainer:hover{
+  background-color: #e2e2e2;
+}
+
+/*========================================================Responsive===================================*/
+@media (max-width: 480px) {
+  .welcomeContainer{
+    flex-direction: column;
+  }
+
+  .greeting{
+    font-size: 4vw;
+    order: 2;
+  }
+
+  .name{
+    font-size: 6vw;
+    order: 3;
+  }
+
+  .portrait{
+    order: 1;
+    width: 40vw;
+  }
+
+  .cvContainer{
+    flex-direction: column;
+  }
+
+  .cvSection{
+    width: 40vw;
+  }
+
+.cvTitle{
+  font-size: 5vh;
+}
+
+  .withLine::before {
+    top: -82%;
+    left: 50%;
+    height: 69px;
+    width: calc(1.4%);
+  }
+
+  .sectionTitle{
+    font-size: 3vw;
+  }
+
+  .sectionTime{
+    font-size: 3vw;
+  }
+
+  .item{
+    height: 50vh;
+    width: 60vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+.imgContainer{
+  position: static;
+  height: 40%;
+  width: 90%;
+  top: 0%;
+  right: 0%; /* Position to the far right */
+  transform: translateY(0%); /* Center vertically */
+  border-radius: 20px;
+}
+
+.summaryContainer{
+  height: 35%;
+  width: 90%;
+  position: static;
+  clip-path: none;
+  transform: translateY(0%);
+}
+
+.summary{
+  font-size: 3vw;
+}
+
+.linkContainer{
+  margin-top: 10%;
+}
+
+.projectSwipe{
+  width: 10vw;
+  height: 10vw;
+  font-size: 5vw;
+}
+
+.projectName{
+  font-size: 4vw;
+  width: 90%;
+}
+
+  .projectsTitle{
+    margin-top: 20%;
+  }
+
+  .projectImg{
+    width: 70%;
+    position: static;
+    top: 50%;
+    left: 50%;
+    transform: translate(23%, 30%) perspective(1000px) rotate3d(3, -5, 2, 20deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */  
+  }
+
+  .skillTitle{
+    font-size: 10vw;
+
+  }
+
+  .skill{
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .skillImg{
+    max-width: 3%;
+  }
+
+  .wave1{
+    top: -5%;
+  }
+  .wave2{
+    top: -2%;
+  }
+  .wave3{
+    top: 8%;
+  }
+  .sources{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sourceContainer{
+    width: 80vw;
+  }
+
+  .srcDescription{
+    font-size: 4vw;
+    margin-left: 1vw;
+  }
+
+  .srcLink{
+    font-size: 2vw;
+  }
+}
