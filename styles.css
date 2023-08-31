@@ -343,7 +343,7 @@ button{
 
   .projectName{
     font-family: Lato;
-    font-size: 2.5vw;
+    font-size: 3vw;
     width: 60%;
     border-bottom: 0.1rem solid black;
   }
@@ -351,7 +351,7 @@ button{
   .summary{
     margin-top: 5%;
     font-family: Lato;
-    font-size: 1vw;
+    font-size: 2vw;
     width: 60%;
   }
 
