@@ -419,7 +419,7 @@ button{
     margin-top: 1%;
     background-color:#926AA6;
     align-items: center;
-    animation: float 3s infinite;
+    animation: float 6s infinite;
     border-radius: 50px;
   }
 
@@ -448,8 +448,14 @@ button{
     0%, 100% {
       transform: translateY(0);
     }
+    25%{
+            transform: translateY(-10px); /* Adjust the distance of floating */
+    }
     50% {
-      transform: translateY(-10px) translateX(5px); /* Adjust the distance of floating */
+      transform: translateY(7px); /* Adjust the distance of floating */
+    }
+    75%{
+            transform: translateY(-5px) /* Adjust the distance of floating */
     }
   }
 
