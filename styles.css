@@ -550,8 +550,9 @@ button{
 .srcText{
   display: flex;
   flex-direction: column;
-  margin-left: 2.5%;
-  margin-top: 2.5%;
+  margin-left: 2%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .sourceContainer{
@@ -751,12 +752,6 @@ button{
 
   .srcDescription{
     font-size: 4vw;
-  }
-
-  .srcText{
-    margin-left: 2%;
-    margin-top: auto;
-    margin-bottom: auto;
   }
 
   .srcLink{
