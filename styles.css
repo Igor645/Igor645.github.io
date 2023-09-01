@@ -63,12 +63,12 @@ button{
 }
 
 .greeting{
-    font-size: 2vw;
+    font-size: 3vw;
     color: white;
 }
 
 .name{
-    font-size: 3vw;
+    font-size: 5vw;
     color: aqua;
 }
 
@@ -323,7 +323,7 @@ button{
     top: 50%;
     left: 61%;
     transform: translate(-50%, -50%) perspective(1000px) rotate3d(3, -5, 2, 20deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */
+    box-shadow: 0 0 75px rgba(255, 0, 238, 10); /* Apply a box shadow all around */
   }
   
 
@@ -419,7 +419,7 @@ button{
     margin-top: 1%;
     background-color:#926AA6;
     align-items: center;
-    animation: float 6s infinite;
+    animation: float 5s infinite;
     border-radius: 50px;
   }
 
@@ -449,13 +449,13 @@ button{
       transform: translateY(0);
     }
     25%{
-            transform: translateY(-10px); /* Adjust the distance of floating */
+            transform: translateY(-3px); /* Adjust the distance of floating */
     }
     50% {
-      transform: translateY(7px); /* Adjust the distance of floating */
+      transform: translateY(3px); /* Adjust the distance of floating */
     }
     75%{
-            transform: translateY(-5px) /* Adjust the distance of floating */
+            transform: translateY(-3px) /* Adjust the distance of floating */
     }
   }
 
