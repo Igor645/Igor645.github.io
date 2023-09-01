@@ -9,16 +9,15 @@ body{
     src: url(fonts/Lato-Regular.ttf);
   }
 
-/* Add a thin horizontal scrollbar with a blue thumb and white track */
-* {
+ 
+  * {
   scrollbar-width: thin;
   scrollbar-color: blue white;
 }
 
-/* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 12px;
-  height: 0px; /* Set height to 0 to hide the horizontal scrollbar */
+  height: 0px;
   background-color: transparent;
 }
 
@@ -26,7 +25,6 @@ body{
   background: transparent;
 }
 
-/* For Webkit-based browsers */
 *::-webkit-scrollbar-thumb {
   background-color:#48b8e2;
   border: 3px solid white;
@@ -76,7 +74,7 @@ button{
     width: 18vw;
     height: auto;
     border-radius: 10%;
-    --s: 15px; /* control the size */
+    --s: 25px;
     padding: var(--s);
     border: var(--s) solid #0000;
     background: conic-gradient(from 90deg at 1px 1px,#0000 25%, white 0);
@@ -267,7 +265,7 @@ button{
     align-items: center;
     justify-content: space-between;
     position: relative;
-    transform: translateX(0); /* Bring the active item back into view */
+    transform: translateX(0);
   }
   
   .projectSwipe {
@@ -279,7 +277,7 @@ button{
     height: 4vw;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
   .projectSwipe:hover{
@@ -311,8 +309,8 @@ button{
     height: 80%;
     display: block;
     top: 50%;
-    right: 2%; /* Position to the far right */
-    transform: translateY(-50%); /* Center vertically */
+    right: 2%;
+    transform: translateY(-50%);
     background-image: linear-gradient(to right, #926AA6, #bd76e0);
     background-color: #926AA6;
   }
@@ -323,7 +321,7 @@ button{
     top: 50%;
     left: 61%;
     transform: translate(-50%, -50%) perspective(1000px) rotate3d(3, -5, 2, 20deg);
-    box-shadow: 0 0 75px rgba(255, 0, 238, 10); /* Apply a box shadow all around */
+    box-shadow: 0 0 75px rgba(255, 0, 238, 10);
   }
   
 
@@ -367,7 +365,7 @@ button{
   .link{
     width: 8vw;
     height: 8vw;
-    box-shadow: 0 0 10px rgba(176, 51, 248, 0.7); /* Apply a box shadow all around */
+    box-shadow: 0 0 10px rgba(176, 51, 248, 0.7);
     border-radius: 20%;
     background-color: white;
     display: flex;
@@ -446,16 +444,16 @@ button{
 
   @keyframes float {
     0%, 100% {
-      transform: translateY(0);
+      transform: translateY(3px);
     }
     25%{
-            transform: translateY(-3px); /* Adjust the distance of floating */
+            transform: translateY(-3px);
     }
     50% {
-      transform: translateY(3px); /* Adjust the distance of floating */
+      transform: translateY(3px); 
     }
     75%{
-            transform: translateY(-3px) /* Adjust the distance of floating */
+            transform: translateY(-3px) 
     }
   }
 
@@ -588,7 +586,7 @@ button{
   display: flex;
   align-items: center;
   height: 100%;
-  width: 15%;
+  min-width: 15%;
   text-align: center;
 }
 
@@ -644,6 +642,11 @@ button{
     font-size: 3vw;
   }
 
+  .project{
+    height: 50vh;
+
+  }
+
   .item{
     height: 50vh;
     width: 60vw;
@@ -657,8 +660,8 @@ button{
   height: 40%;
   width: 90%;
   top: 0%;
-  right: 0%; /* Position to the far right */
-  transform: translateY(0%); /* Center vertically */
+  right: 0%;
+  transform: translateY(0%);
   border-radius: 20px;
 }
 
@@ -684,6 +687,10 @@ button{
   font-size: 5vw;
 }
 
+.projectContainer{
+  width: 100%;
+}
+
 .projectName{
   font-size: 4vw;
   width: 90%;
@@ -691,20 +698,28 @@ button{
 
   .projectsTitle{
     margin-top: 20%;
+    font-size: 9vw;
   }
 
   .projectImg{
     width: 70%;
     position: static;
-    top: 50%;
-    left: 50%;
-    transform: translate(23%, 30%) perspective(1000px) rotate3d(3, -5, 2, 20deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */  
+    transform: translate(23%, 30%);
+    box-shadow: 0 0 30px rgba(255, 0, 238, 10);
+    border-radius: 10px;
+  }
+
+  .transition{
+    height: 10vh;
   }
 
   .skillTitle{
     font-size: 10vw;
 
+  }
+
+  .skills{
+    height: 70vh;
   }
 
   .skill{
@@ -736,10 +751,19 @@ button{
 
   .srcDescription{
     font-size: 4vw;
-    margin-left: 1vw;
+  }
+
+  .srcText{
+    margin-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .srcLink{
     font-size: 2vw;
+  }
+
+  .arrow{
+    font-size: 7vw;
   }
 }
